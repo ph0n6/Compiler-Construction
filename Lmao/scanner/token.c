@@ -42,7 +42,6 @@ int keywordEq(char *kw, char *string) {
   return ((*kw == '\0') && (*string == '\0'));
 }
 
-// Check whether a string is a keyword or not
 TokenType checkKeyword(char *string) {
   int i;
   for (i = 0; i < KEYWORDS_COUNT; i++)
@@ -51,7 +50,6 @@ TokenType checkKeyword(char *string) {
   return TK_NONE;
 }
 
-// Create new token, provided type of token and location
 Token* makeToken(TokenType tokenType, int lineNo, int colNo) {
   Token *token = (Token*)malloc(sizeof(Token));
   token->tokenType = tokenType;

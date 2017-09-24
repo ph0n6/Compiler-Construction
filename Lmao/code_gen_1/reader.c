@@ -11,7 +11,6 @@ FILE *inputStream;
 int lineNo, colNo;
 int currentChar;
 
-// Read a character from input stream
 int readChar(void) {
   currentChar = getc(inputStream);
   colNo ++;
@@ -22,7 +21,6 @@ int readChar(void) {
   return currentChar;
 }
 
-// Open input stream
 int openInputStream(char *fileName) {
   inputStream = fopen(fileName, "rt");
   if (inputStream == NULL)
@@ -33,7 +31,6 @@ int openInputStream(char *fileName) {
   return IO_SUCCESS;
 }
 
-// Close input stream
 void closeInputStream() {
   fclose(inputStream);
 }
