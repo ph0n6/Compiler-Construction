@@ -234,9 +234,9 @@ Token* getToken(void) {
       free(token);
       skipComment();
       return getToken();
-    case CHAR_SPACE:
-      readChar();
-      return getToken();
+ //   case CHAR_SPACE:
+ //     readChar();
+ //     return getToken();
     default:
       // Token Left Parenthesis
       token->tokenType = SB_LPAR;
